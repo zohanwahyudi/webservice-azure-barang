@@ -1,5 +1,7 @@
 package webservices.rea.webserviceazurebarang.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,5 +29,17 @@ public class BarangService {
 
     public void removeOne(Long ID){
         barangRepo.deleteById(ID);
+    }
+
+    public List<Barang> SearchByNama(String nama){
+        return barangRepo.SearchByNama(nama);
+    }
+
+    public List<Barang> SearchByDeskripsi(String deskripsi){
+        return barangRepo.SearchByDeskripsi(deskripsi);
+    }
+
+    public List<Barang> SearchByharga(String harga){
+        return barangRepo.SearchByHarga(harga);
     }
 }
