@@ -52,5 +52,19 @@ public class BarangController {
         }
         return null;
     }
+   
+  /* 
+    @GetMapping("/search")
+    public List<Barang> SearchByNama(@RequestParam("nama") String nama){
+    return barangService.SearchByNama(nama); }
     
+    @GetMapping("/search")
+    public List<Barang> SearchByDeskripsi(@RequestParam("deskripsi") String deskripsi){
+    return barangService.SearchByDeskripsi(deskripsi); }
+
+    @GetMapping("/search")
+    public List<Barang> SearchByharga(@RequestParam("harga") String harga){
+    return barangService.SearchByharga(harga); }
+    */
+
 }
