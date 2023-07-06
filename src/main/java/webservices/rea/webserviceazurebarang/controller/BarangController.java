@@ -42,7 +42,7 @@ public class BarangController {
     }
 
     @GetMapping("/search")
-    public List<Barang> SearchBarang(@RequestParam("nama") String nama, @RequestParam("deskripsi") String deskripsi, @RequestParam("harga") String harga){
+    public List<Barang> SearchBarang(@RequestParam(value = "nama", defaultValue = "") String nama, @RequestParam(value = "deskripsi", defaultValue = "") String deskripsi, @RequestParam(value = "harga", defaultValue = "") String harga){
         if (!nama.isEmpty()) {
             return barangService.SearchByNama(nama);
         } else if (!deskripsi.isEmpty()) {
